@@ -26,6 +26,3 @@ const App = () => {
 };
 
 export default App;
-
-
-// 35:20
