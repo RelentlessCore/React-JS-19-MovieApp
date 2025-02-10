@@ -11,7 +11,7 @@ const API_OPTIONS = {
     accept: "application/json",
     Authorization: `Bearer ${API_KEY}`  
   } 
-};
+}; 
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");  
