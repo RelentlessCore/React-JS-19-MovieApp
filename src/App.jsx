@@ -28,7 +28,7 @@ const App = () => {
         throw new Error("Failed to fetch movies");  
       }
 
-      const data = await response.json();
+      const data = await response.json(); 
 
       console.log(data);
     } catch (error) {
