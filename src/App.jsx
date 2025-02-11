@@ -38,7 +38,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetchMovies();
+    fetchMovies(); 
   }, []);
 
   return (
