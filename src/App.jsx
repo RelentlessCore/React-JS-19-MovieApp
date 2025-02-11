@@ -12,7 +12,7 @@ const API_OPTIONS = {
     Authorization: `Bearer ${API_KEY}`      
   } 
 }; 
-
+ 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");  
 
