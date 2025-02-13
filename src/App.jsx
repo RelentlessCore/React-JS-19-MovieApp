@@ -18,12 +18,18 @@ const API_OPTIONS = {
 };
 
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-  const [movieList, setMovieList] = useState([]);
-  const [trendingMovies, setTrendingMovies] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const [movieList, setMovieList] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const [trendingMovies, setTrendingMovies] = useState([]);
+
+  const [isTrendingLoading, setIsTrendingLoading] = useState(false); // For showing loading spinner
+  const [trendingError, setTrendingError] = useState(""); // For handling errors
+
 
   useDebounce(() => setDebouncedSearchTerm(searchTerm),
     500, [searchTerm]
@@ -67,12 +73,17 @@ const App = () => {
   };
 
   const loadTrendingMovies = async () => {
+    setIsTrendingLoading(true); // 1️⃣ Start loading before fetching
+    setTrendingError(""); // 2️⃣ Clear any previous errors
+
     try {
       const movies = await getTrendingMovies();
-
       setTrendingMovies(movies);
     } catch (error) {
       console.log(`Error fetching trending movies: ${error}`);
+      setTrendingError("Failed to load trending movies."); // 3️⃣ Store the error message
+    } finally {
+      setIsTrendingLoading(false); // 4️⃣ Stop loading after fetching
     }
   };
 
@@ -96,10 +107,14 @@ const App = () => {
           <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </header>
 
-        {trendingMovies.length > 0 && (
-          <section className='trending'>
-            <h2>Trending Movies</h2>
+        <section className='trending'>
+          <h2>Trending Movies</h2>
 
+          {isTrendingLoading ? (
+            <Spinner /> // 1️⃣ Show the spinner while loading
+          ) : trendingError ? (
+            <p className='text-red-500'>{trendingError}</p> // 2️⃣ Show error message if failed
+          ) : trendingMovies.length > 0 ? (
             <ul>
               {trendingMovies.map((movie, index) => (
                 <li key={movie.$id}>
@@ -108,8 +123,10 @@ const App = () => {
                 </li>
               ))}
             </ul>
-          </section>
-        )}
+          ) : (
+            <p>No trending movies available.</p> // 3️⃣ Show message if no movies are found
+          )}
+        </section>
 
         <section className='all-movies'>
           <h2>All Movies</h2>
