@@ -17,14 +17,6 @@ A blazing-fast and beautifully responsive movie discovery experience powered by 
 
 ## 🛠 Tech Stack
 
-- **Core:** HTML, CSS, JavaScript  
-- **Framework:** React 19
-- **Routing:** React Router  
-- **API Integration:** CoinGecko API  
-- **Data Visualization:** Google Charts  
-- **State Management:** React Context API  
-- **Bundler:** Vite  
-
 - **Core:** HTML, CSS, JavaScript
 - **Framework:** React 19 
 - **State & Hooks:** React useState, useEffect, useDebounce (react-use)
