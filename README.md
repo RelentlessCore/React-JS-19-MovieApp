@@ -6,13 +6,6 @@ A blazing-fast and beautifully responsive movie discovery experience powered by 
 
 ## ✨ Features
 
-✅ **Live Market Data** – Real-time prices, market caps, and 24h changes for top cryptocurrencies  
-✅ **Dynamic Coin Pages** – Detailed views with current stats and price history charts  
-✅ **Currency Switching (USD/EUR)** – Instantly toggle between supported currencies  
-✅ **Predictive Search** – Intelligent autosuggestions as you type  
-✅ **Interactive Line Charts** – Visualize 10-day historical pricing with Google Charts  
-✅ **Responsive UI** – Clean layout and mobile-friendly design  
-
 ✅ **Live Search with Debounce** – Instantly search through thousands of titles with optimized, flicker-free input handling.
 ✅ **Trending Movies from Appwrite** – Tracks and displays the most searched movies based on real usage data.
 ✅ **Smart Search Tracking** – Automatically logs and updates search trends using Appwrite’s database services.
