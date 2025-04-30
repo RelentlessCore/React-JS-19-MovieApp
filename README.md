@@ -17,13 +17,13 @@ A blazing-fast and beautifully responsive movie discovery experience powered by 
 
 ## 🛠 Tech Stack
 
-- **Core:** HTML, CSS, JavaScript
-- **Framework:** React 19
-- **State & Hooks:** React useState, useEffect, useDebounce (react-use)
-- **Backend-as-a-Service:** Appwrite (document DB, search tracking)
-- **API:** TMDB (The Movie Database)
-- **Build Tool:** Vite
-- **Styling:** Custom CSS + Tailwind utility classes
+**Core:** HTML, CSS, JavaScript
+**Framework:** React 19
+**State & Hooks:** React useState, useEffect, useDebounce (react-use)
+**Backend-as-a-Service:** Appwrite (document DB, search tracking)
+**API:** TMDB (The Movie Database)
+**Build Tool:** Vite
+**Styling:** Custom CSS + Tailwind utility classes
 
 ---
 
