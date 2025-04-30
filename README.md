@@ -13,7 +13,9 @@ A blazing-fast and beautifully responsive movie discovery experience powered by 
 ✅ **Smart Search Tracking** – Automatically logs and updates search trends using Appwrite’s database services.
 <br>
 ✅ **Responsive Grid & Card Layouts** – Enjoy fluid design across desktop, tablet, and mobile with clean, accessible UI.
+<br>
 ✅ **Error Handling & Feedback** – Graceful fallback messages and loaders ensure a smooth user experience.
+<br>
 ✅ **Performance-First Architecture** – Built with Vite and React 19 for ultra-fast loading and UI responsiveness.
 
 ---
